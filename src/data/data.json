@@ -1,6 +1,24 @@
 {
   "property": [
     {
+      "id": "852223931132",
+      "area": "Westchester County",
+      "address": "35 Sterling ave, White Plains, NY 10606",
+      "city": "Scarsdale",
+      "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+      "type": "Single Family",
+      "floorspace": 1264,
+      "beds": 2,
+      "baths": 1,
+      "price": 95000,
+      "parking": 1,
+      "construction": ["fireplace", "landry"],
+      "broker": {
+        "name": "john",
+        "email": "john@gmail.com"
+      }
+    },
+    {
       "id": "852223931024",
       "area": "Westchester County",
       "address": "6 Garth rd, Scarsdale, NY 10583",

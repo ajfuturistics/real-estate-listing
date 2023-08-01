@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { getProperties } from "../../redux/property/propertyActions";
 import FilterBar from "../../components/FilterBar/FilterBar";
 import { useNavigate } from "react-router-dom";
+import PropertyCard from "../../components/PropertyCard/PropertyCard";
 
 const Property = () => {
   const dispatch = useDispatch();
@@ -38,12 +39,13 @@ const Property = () => {
         ) : (
           <>
             <FilterBar />
+
             {filteredProperties && filteredProperties.length !== 0 ? (
-              filteredProperties.map((item) => (
-                <p key={item.id} className="text-center ">
-                  {item.address}
-                </p>
-              ))
+              <div className="py-6 flex gap-4 flex-wrap justify-center">
+                {filteredProperties.map((item) => (
+                  <PropertyCard key={item.id} {...item} />
+                ))}
+              </div>
             ) : (
               <p className="text-center ">No results found</p>
             )}
