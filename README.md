@@ -2,6 +2,8 @@
 
 Redux Toolkit, Vite, React, and Tailwind CSS are all used in the development of this project. Users can log in, register, search for properties they're interested in, and filter them by price, type, and location using this. In addition, users can save properties in their profiles. I used github raw JSON data to mock an API call using Axios and other states handled locally.
 
+Deployed [https://realestate-listing-task.netlify.app](https://realestate-listing-task.netlify.app)
+
 ## Steps to install
 
 ## Steps to run
