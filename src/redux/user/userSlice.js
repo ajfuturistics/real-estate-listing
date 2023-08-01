@@ -4,6 +4,7 @@ const initialState = {
   isLoggedIn: false,
   users: [],
   user: null,
+  saved: [],
 };
 
 export const userSlice = createSlice({
@@ -23,10 +24,17 @@ export const userSlice = createSlice({
       state.user = action.payload;
       state.isLoggedIn = true;
     },
+    saveItem: (state, action) => {
+      state.saved = [...state.saved, action.payload];
+    },
+    removeSaveItem: (state, action) => {
+      state.saved = action.payload;
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { login, logout, register } = userSlice.actions;
+export const { login, logout, register, saveItem, removeSaveItem } =
+  userSlice.actions;
 
 export default userSlice.reducer;

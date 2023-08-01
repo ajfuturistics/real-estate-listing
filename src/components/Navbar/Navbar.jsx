@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { logout } from "../../redux/user/userSlice";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -18,13 +18,24 @@ const Navbar = () => {
           <h2 className="font-semibold text-xl">Real-Estate Listing</h2>
         </div>
 
-        <div className="">
-          <button
-            onClick={logoutUser}
-            className="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-gray-50 rounded-xl flex items-center gap-2"
-          >
-            <span>Logout</span>
-          </button>
+        <div className="flex justify-center items-center gap-2">
+          <div className="">
+            <button
+              onClick={logoutUser}
+              className="px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-gray-50 rounded-xl flex items-center gap-2"
+            >
+              <span>Logout</span>
+            </button>
+          </div>
+          <div className="">
+            <Link to="/profile" className="">
+              <img
+                className="w-12 h-12 rounded-full"
+                src="/user-avatar.png"
+                alt="userlogo"
+              />
+            </Link>
+          </div>
         </div>
       </div>
     </nav>
